@@ -1,6 +1,6 @@
 package net.tigereye.chestcavity.items;
 
-import net.minecraft.client.item.TooltipContext;
+import net.minecraft.item.Item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.damage.ProjectileDamageSource;

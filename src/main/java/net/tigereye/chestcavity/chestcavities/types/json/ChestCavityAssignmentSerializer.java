@@ -22,13 +22,13 @@ public class ChestCavityAssignmentSerializer {
         //playerChestCavity should default to false
 
         Map<Identifier, Identifier> assignments = new HashMap<>();
-        Identifier chestcavitytype = new Identifier(ccaJson.chestcavity);
+        Identifier chestcavitytype = Identifier.of(ccaJson.chestcavity);
         int i = 0;
         for (JsonElement entry :
                 ccaJson.entities) {
             ++i;
             try {
-                assignments.put(new Identifier(entry.getAsString()),chestcavitytype);
+                assignments.put(Identifier.of(entry.getAsString()),chestcavitytype);
             } catch (Exception e) {
                 ChestCavity.LOGGER.error("Error parsing entry no. " + i + " in " + id.toString() + "'s entity list");
             }

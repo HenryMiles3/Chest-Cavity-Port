@@ -27,10 +27,10 @@ public class ChestCavity implements ModInitializer {
 	public static final Logger LOGGER = LogManager.getLogger();
 	public static CCConfig config;
 	public static final ScreenHandlerType<ChestCavityScreenHandler> CHEST_CAVITY_SCREEN_HANDLER;
-	public static final Identifier CHEST_CAVITY_SCREEN_ID = new Identifier(MODID,"chest_cavity_screen");
-	public static final Identifier COMPATIBILITY_TAG = new Identifier(MODID,"organ_compatibility");
+	public static final Identifier CHEST_CAVITY_SCREEN_ID = Identifier.of(MODID,"chest_cavity_screen");
+	public static final Identifier COMPATIBILITY_TAG = Identifier.of(MODID,"organ_compatibility");
 	public static final ItemGroup ORGAN_ITEM_GROUP = FabricItemGroupBuilder.build(
-			new Identifier(MODID, "organs"),
+			Identifier.of(MODID, "organs"),
 			() -> new ItemStack(CCItems.HUMAN_STOMACH));
 
 	//public static final ScreenHandlerType<ScreenHandler> CHEST_CAVITY_SCREEN_HANDLER;

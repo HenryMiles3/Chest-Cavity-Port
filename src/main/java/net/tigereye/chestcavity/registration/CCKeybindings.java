@@ -13,10 +13,10 @@ import java.util.List;
 public class CCKeybindings {
     private static String ORGAN_ABILITY_KEY_CATEGORY = "organ_abilities";
     public static KeyBinding UTILITY_ABILITIES;
-    public static Identifier UTILITY_ABILITIES_ID = new Identifier(ChestCavity.MODID,"utility_abilities");
+    public static Identifier UTILITY_ABILITIES_ID = Identifier.of(ChestCavity.MODID,"utility_abilities");
     public static List<Identifier> UTILITY_ABILITY_LIST = new ArrayList<>();
     public static KeyBinding ATTACK_ABILITIES;
-    public static Identifier ATTACK_ABILITIES_ID = new Identifier(ChestCavity.MODID,"attack_abilities");
+    public static Identifier ATTACK_ABILITIES_ID = Identifier.of(ChestCavity.MODID,"attack_abilities");
     public static List<Identifier> ATTACK_ABILITY_LIST = new ArrayList<>();
     public static KeyBinding CREEPY;
     public static KeyBinding DRAGON_BREATH;

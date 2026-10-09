@@ -20,7 +20,7 @@ public class GeneratedChestCavityTypeManager implements SimpleSynchronousResourc
 
     @Override
     public Identifier getFabricId() {
-        return new Identifier(ChestCavity.MODID, RESOURCE_LOCATION);
+        return Identifier.of(ChestCavity.MODID, RESOURCE_LOCATION);
     }
 
     @Override

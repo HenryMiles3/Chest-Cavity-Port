@@ -8,7 +8,7 @@ public class CCRequiem {
     public static String MODID = "requiem";
     public static String NAME = "Requiem";
     public static boolean REQUIEM_ACTIVE = false;
-    public static Identifier PLAYER_SHELL_ID = new Identifier(MODID,"player_shell");
+    public static Identifier PLAYER_SHELL_ID = Identifier.of(MODID,"player_shell");
 
     public static void register(){
         if(CrossModContent.checkIntegration(MODID,NAME,ChestCavity.config.REQUIEM_INTEGRATION)){

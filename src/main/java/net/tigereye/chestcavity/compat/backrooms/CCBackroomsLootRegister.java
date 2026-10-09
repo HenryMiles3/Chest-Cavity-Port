@@ -12,9 +12,9 @@ import net.tigereye.chestcavity.registration.CCItems;
 
 public class CCBackroomsLootRegister {
 
-    public static final Identifier LEVEL0CHEST = new Identifier("backrooms", "chests/level0");
-    public static final Identifier LEVEL1CHEST = new Identifier("backrooms", "chests/level1");
-    public static final Identifier LEVEL3CHEST = new Identifier("backrooms", "chests/level3");
+    public static final Identifier LEVEL0CHEST = Identifier.of("backrooms", "chests/level0");
+    public static final Identifier LEVEL1CHEST = Identifier.of("backrooms", "chests/level1");
+    public static final Identifier LEVEL3CHEST = Identifier.of("backrooms", "chests/level3");
 
     public static void register(){
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, supplier, setter) -> {

@@ -1,6 +1,6 @@
 package net.tigereye.chestcavity.listeners;
 
-import net.minecraft.item.FoodComponent;
+import net.minecraft.component.type.FoodComponent;
 import net.minecraft.item.Item;
 import net.tigereye.chestcavity.interfaces.ChestCavityEntity;
 import net.tigereye.chestcavity.registration.CCItems;

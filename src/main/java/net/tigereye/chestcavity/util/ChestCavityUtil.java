@@ -12,11 +12,12 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.tag.TagKey;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Box;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
 import net.minecraft.world.GameRules;
 import net.tigereye.chestcavity.ChestCavity;
 import net.tigereye.chestcavity.chestcavities.ChestCavityInventory;
@@ -366,7 +367,7 @@ public class ChestCavityUtil {
 
     public static void dropUnboundOrgans(ChestCavityInstance cc) {
         if(ChestCavity.config.REQUIEM_INTEGRATION){
-            if(Registry.ENTITY_TYPE.getId(cc.owner.getType()).compareTo(CCRequiem.PLAYER_SHELL_ID) == 0){
+            if(Registries.ENTITY_TYPE.getId(cc.owner.getType()).compareTo(CCRequiem.PLAYER_SHELL_ID) == 0){
                 return; //player shells shall not drop organs
             }
         }

@@ -23,7 +23,7 @@ public class OrganSerializer {
             throw new JsonSyntaxException("Organ " + id + " must have organScores");
         }
         OrganData organData = new OrganData();
-        Identifier itemID = new Identifier(organJson.itemID);
+        Identifier itemID = Identifier.of(organJson.itemID);
         organData.pseudoOrgan = organJson.pseudoOrgan;
         organData.organScores = readOrganScoresFromJson(id, organJson.organScores);
         return new Pair<>(itemID,organData);
@@ -40,7 +40,7 @@ public class OrganSerializer {
                 } else if (!obj.has("value")) {
                     ChestCavity.LOGGER.error("Missing value component in " + id.toString() + "'s organ scores");
                 } else {
-                    Identifier ability = new Identifier(obj.get("id").getAsString());
+                    Identifier ability = Identifier.of(obj.get("id").getAsString());
                     organScores.put(ability,obj.get("value").getAsFloat());
                 }
             }

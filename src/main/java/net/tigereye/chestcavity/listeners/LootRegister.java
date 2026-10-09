@@ -31,7 +31,7 @@ import java.util.*;
 public class LootRegister {
     
 
-    private static final Identifier DESERT_PYRAMID_LOOT_TABLE_ID = new Identifier("minecraft", "chests/desert_pyramid");
+    private static final Identifier DESERT_PYRAMID_LOOT_TABLE_ID = Identifier.of("minecraft", "chests/desert_pyramid");
 
     private static List<SalvageRecipe> salvageRecipeList;
 

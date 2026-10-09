@@ -3,7 +3,7 @@ package net.tigereye.chestcavity.listeners;
 import net.fabricmc.fabric.api.event.Event;
 import net.fabricmc.fabric.api.event.EventFactory;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.FoodComponent;
+import net.minecraft.component.type.FoodComponent;
 import net.minecraft.item.Item;
 import net.tigereye.chestcavity.chestcavities.instance.ChestCavityInstance;
 import net.tigereye.chestcavity.interfaces.ChestCavityEntity;

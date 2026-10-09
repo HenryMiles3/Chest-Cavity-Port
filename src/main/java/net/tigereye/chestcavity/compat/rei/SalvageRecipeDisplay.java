@@ -15,7 +15,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class SalvageRecipeDisplay implements Display {
-    public static final CategoryIdentifier<SalvageRecipeDisplay> IDENTIFIER = CategoryIdentifier.of(new Identifier(ChestCavity.MODID,"crafting_salvage"));
+    public static final CategoryIdentifier<SalvageRecipeDisplay> IDENTIFIER = CategoryIdentifier.of(Identifier.of(ChestCavity.MODID,"crafting_salvage"));
 
     public List<EntryIngredient> input;
     public List<EntryIngredient> output;

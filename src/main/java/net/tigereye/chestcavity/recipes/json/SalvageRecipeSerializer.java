@@ -10,7 +10,7 @@ import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
 import net.tigereye.chestcavity.ChestCavity;
 import net.tigereye.chestcavity.recipes.SalvageRecipe;
 
@@ -27,7 +27,7 @@ public class SalvageRecipeSerializer implements RecipeSerializer<SalvageRecipe> 
         if (recipeJson.required == 0) recipeJson.required = 1;
         if (recipeJson.count == 0) recipeJson.count = 1;
         Ingredient input = Ingredient.fromJson(recipeJson.ingredient);
-        Item outputItem = Registry.ITEM.getOrEmpty(new Identifier(recipeJson.result))
+        Item outputItem = Registries.ITEM.getOrEmpty(Identifier.of(recipeJson.result))
                 // Validate the inputted item actually exists
                 .orElseThrow(() -> new JsonSyntaxException("No such item " + recipeJson.result));
         ItemStack output = new ItemStack(outputItem, recipeJson.count);

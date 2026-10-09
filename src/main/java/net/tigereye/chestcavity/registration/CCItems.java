@@ -1,7 +1,7 @@
 package net.tigereye.chestcavity.registration;
 
 import net.minecraft.item.*;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
 
 import net.tigereye.chestcavity.ChestCavity;
 import net.tigereye.chestcavity.items.ChestOpener;
@@ -424,6 +424,6 @@ public class CCItems {
 	}
 	
 	private static void registerItem(String name, Item item) {
-		Registry.register(Registry.ITEM, ChestCavity.MODID + ":" + name, item);
+		Registry.register(Registries.ITEM, ChestCavity.MODID + ":" + name, item);
     }
 }

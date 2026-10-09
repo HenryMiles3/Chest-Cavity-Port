@@ -4,8 +4,9 @@ import com.google.gson.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registry;
 import net.tigereye.chestcavity.ChestCavity;
 import net.tigereye.chestcavity.chestcavities.ChestCavityInventory;
 import net.tigereye.chestcavity.chestcavities.types.GeneratedChestCavityType;
@@ -38,7 +39,7 @@ public class ChestCavityTypeSerializer {
 
         /*
         Ingredient input = Ingredient.fromJson(recipeJson.ingredient);
-        Item outputItem = Registry.ITEM.getOrEmpty(new Identifier(recipeJson.result))
+        Item outputItem = Registries.ITEM.getOrEmpty(Identifier.of(recipeJson.result))
                 // Validate the inputted item actually exists
                 .orElseThrow(() -> new JsonSyntaxException("No such item " + recipeJson.result));
         ItemStack output = new ItemStack(outputItem, recipeJson.count);
@@ -61,8 +62,8 @@ public class ChestCavityTypeSerializer {
                 } else if (!obj.has("position")) {
                     ChestCavity.LOGGER.error("Missing position component in entry no. " + i + " in " + id.toString() + "'s default chest cavity");
                 } else {
-                    Identifier itemID = new Identifier(obj.get("item").getAsString());
-                    Optional<Item> itemOptional = Registry.ITEM.getOrEmpty(new Identifier(obj.get("item").getAsString()));
+                    Identifier itemID = Identifier.of(obj.get("item").getAsString());
+                    Optional<Item> itemOptional = Registries.ITEM.getOrEmpty(Identifier.of(obj.get("item").getAsString()));
                     if (itemOptional.isPresent()) {
                         Item item = itemOptional.get();
                         ItemStack stack;
@@ -136,7 +137,7 @@ public class ChestCavityTypeSerializer {
                 } else if (!obj.has("value")) {
                     ChestCavity.LOGGER.error("Missing value component in " + id.toString() + "'s organ scores");
                 } else {
-                    Identifier ability = new Identifier(obj.get("id").getAsString());
+                    Identifier ability = Identifier.of(obj.get("id").getAsString());
                     organScores.put(ability,obj.get("value").getAsFloat());
                 }
             }

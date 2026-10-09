@@ -37,7 +37,7 @@ public class NetworkUtil {
         cc.opened = buf.readBoolean();
         int entries = buf.readInt();
         for(int i = 0; i < entries; i++){
-            organScores.put(new Identifier(buf.readString()),buf.readFloat());
+            organScores.put(Identifier.of(buf.readString()),buf.readFloat());
         }
         cc.setOrganScores(organScores);
         SendC2SChestCavityReceivedUpdatePacket(cc);

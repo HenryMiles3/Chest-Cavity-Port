@@ -16,11 +16,11 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 public class CCNetworkingPackets {
-    public static final Identifier ORGAN_DATA_PACKET_ID = new Identifier(ChestCavity.MODID,"organ_data");
-    public static final Identifier UPDATE_PACKET_ID = new Identifier(ChestCavity.MODID,"update");
-    public static final Identifier RECEIVED_UPDATE_PACKET_ID = new Identifier(ChestCavity.MODID,"received_update");
+    public static final Identifier ORGAN_DATA_PACKET_ID = Identifier.of(ChestCavity.MODID,"organ_data");
+    public static final Identifier UPDATE_PACKET_ID = Identifier.of(ChestCavity.MODID,"update");
+    public static final Identifier RECEIVED_UPDATE_PACKET_ID = Identifier.of(ChestCavity.MODID,"received_update");
 
-    public static final Identifier HOTKEY_PACKET_ID = new Identifier(ChestCavity.MODID, "hotkey");
+    public static final Identifier HOTKEY_PACKET_ID = Identifier.of(ChestCavity.MODID, "hotkey");
 
     public static void register(){
         ServerLoginConnectionEvents.QUERY_START.register(NetworkUtil::sendOrganDataPacket);

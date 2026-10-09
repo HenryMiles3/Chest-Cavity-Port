@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import net.minecraft.entity.player.HungerManager;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.FoodComponent;
+import net.minecraft.component.type.FoodComponent;
 import net.minecraft.item.Item;
 import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 

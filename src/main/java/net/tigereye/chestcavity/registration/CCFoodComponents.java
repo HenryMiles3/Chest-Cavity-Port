@@ -2,7 +2,7 @@ package net.tigereye.chestcavity.registration;
 
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.FoodComponent;
+import net.minecraft.component.type.FoodComponent;
 import net.tigereye.chestcavity.ChestCavity;
 
 public class CCFoodComponents {
